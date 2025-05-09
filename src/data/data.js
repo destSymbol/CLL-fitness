@@ -37,7 +37,7 @@ export const data = {
             "frequency": "每周3-4天",
             "schedule": [
                 {
-                    "day": "周一",
+                    "day": "周一_",
                     "focus": "全身训练A",
                     "exercises": [
                         { "name": "深蹲", "sets": 3, "reps": "12-15", "rest": "60秒", "gifUrl": "https://media1.tenor.com/m/U7_1cC29pccAAAAC/perfect-squat-squat.gif" },

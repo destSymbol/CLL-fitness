@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #1e40af;
+  --accent-color: #ff6b6b;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --transition-normal: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+/* 动画效果 */
+.card-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+.card-hover:hover {
+  @apply transform -translate-y-1 shadow-lg;
+}
+
+.pulse-effect {
+  @apply animate-pulse;
+}
+
+/* 按钮效果 */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+}
+
+.btn-secondary {
+  @apply bg-white text-blue-600 border border-blue-300 hover:bg-blue-50 active:bg-blue-100;
+}
+
+/* 加载动画 */
+.spinner {
+  @apply w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin;
+}
+
+/* 图片容器 */
+.img-container {
+  @apply relative overflow-hidden rounded-lg;
+}
+
+.img-container img {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.img-container:hover img {
+  @apply transform scale-105;
+}
+
+/* 页面过渡效果 */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* 卡片样式 */
+.custom-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+}
+
+/* 响应式文本 */
+.responsive-text-lg {
+  @apply text-lg sm:text-xl md:text-2xl font-bold;
+}
+
+.responsive-text-md {
+  @apply text-base sm:text-lg md:text-xl font-semibold;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
+} 
